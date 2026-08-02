@@ -1,0 +1,23 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f4e3b7" />
+      <stop offset="100%" stop-color="#c6a872" />
+    </linearGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" result="noise" /><feColorMatrix type="saturate" values="0.2" /></filter>
+  </defs>
+  <rect width="1200" height="800" rx="56" fill="url(#bg)" filter="url(#grain)" />
+  <path d="M80 80 H1120 V720 H80 Z" fill="none" stroke="#845f2f" stroke-width="18" />
+  <path d="M200 540 C280 460 380 420 500 400 C640 380 760 430 820 520 C880 610 860 690 780 710 C700 730 620 700 540 650 C470 600 420 560 360 540 C300 520 240 540 200 540 Z" fill="#a88750" opacity="0.82" />
+  <g fill="none" stroke="#6d4b24" stroke-width="14">
+    <path d="M230 450 C320 410 420 390 520 400" stroke-dasharray="20 14" />
+    <path d="M420 640 C520 620 620 620 700 650" />
+    <path d="M240 580 C320 560 400 560 480 580" />
+  </g>
+  <path d="M200 270 C260 240 340 240 420 280 C500 320 560 380 600 450" fill="none" stroke="#6d4b24" stroke-width="14" stroke-dasharray="18 16" />
+  <path d="M840 240 C880 240 920 260 940 300 C960 340 960 380 940 420 C920 460 880 480 840 470" fill="none" stroke="#6d4b24" stroke-width="14" />
+  <path d="M240 620 C340 590 420 600 520 630" fill="none" stroke="#6d4b24" stroke-width="12" stroke-linecap="round" />
+  <path d="M950 210 L980 250 L950 290 L920 250 Z" fill="#6d4b24" opacity="0.9" />
+  <ellipse cx="930" cy="250" rx="10" ry="6" fill="#6d4b24" />
+  <text x="120" y="730" font-family="Georgia, serif" font-size="48" fill="#54361d">Tideglass of Nerath</text>
+</svg>

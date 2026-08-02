@@ -1,0 +1,18 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="parchment" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f6e0b4"/>
+      <stop offset="100%" stop-color="#d0ab75"/>
+    </linearGradient>
+    <filter id="noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" result="noise" />
+      <feColorMatrix type="saturate" values="0.2" />
+    </filter>
+  </defs>
+  <rect width="1200" height="800" rx="80" fill="url(#parchment)" filter="url(#noise)" />
+  <rect x="100" y="100" width="1000" height="620" rx="56" fill="none" stroke="#7b5221" stroke-width="18" />
+  <path d="M380 260 C430 190 520 170 600 210 C700 260 760 360 720 460 C680 560 560 620 450 590 C340 560 320 450 380 360 Z" fill="#8d6a42" opacity="0.75" />
+  <path d="M660 250 C700 220 760 220 800 250 C840 280 840 340 800 370 C760 400 700 400 660 370 C620 340 620 280 660 250 Z" fill="#634124" />
+  <path d="M540 520 C600 470 700 460 760 510" fill="none" stroke="#4f331e" stroke-width="20" stroke-linecap="round" />
+  <text x="120" y="730" font-family="Georgia, serif" font-size="62" fill="#5f3b1e" letter-spacing="3">Relic of the Moon</text>
+</svg>

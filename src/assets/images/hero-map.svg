@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="paper" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f4e3b6" />
+      <stop offset="45%" stop-color="#e7d2a3" />
+      <stop offset="100%" stop-color="#c9a66a" />
+    </linearGradient>
+    <linearGradient id="ink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5b3d1d" />
+      <stop offset="100%" stop-color="#8a5f31" />
+    </linearGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.35" numOctaves="3" stitchTiles="stitch" result="noise" /><feColorMatrix type="saturate" values="0" /><feComponentTransfer><feFuncA type="linear" slope="0.16" /></feComponentTransfer></filter>
+    <filter id="blur"><feGaussianBlur stdDeviation="0.5" /></filter>
+  </defs>
+
+  <rect width="1200" height="780" fill="url(#paper)" />
+  <rect width="1200" height="780" fill="url(#paper)" opacity="0.6" />
+  <rect width="1200" height="780" fill="url(#paper)" opacity="0.3" filter="url(#grain)" />
+
+  <g fill="none" stroke="url(#ink)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.95">
+    <path d="M130 130c90-30 170 20 260 0s110-65 210-60 145 60 190 130 60 170 120 220 140 40 210 15" />
+    <path d="M220 220c120-20 200 10 280 25s110-50 190-30 140 85 160 150 100 120 170 130" />
+    <path d="M100 380c60 70 160 20 240 15s140-30 210 10 160 60 220 90 130 70 180 50" />
+    <path d="M90 560c90 20 180-40 250-20s130 50 210 65 130 20 200 45 120 50 190 30" />
+  </g>
+
+  <g fill="none" stroke="#6a4723" stroke-width="2" stroke-dasharray="8 10" opacity="0.85">
+    <path d="M180 150c80-30 160 0 230 20" />
+    <path d="M310 480c54-30 110-26 160-10" />
+    <path d="M840 130c40 25 84 32 120 45" />
+  </g>
+
+  <g fill="#6a4723" opacity="0.8">
+    <circle cx="210" cy="185" r="5" />
+    <circle cx="720" cy="170" r="4" />
+    <circle cx="560" cy="410" r="5" />
+    <circle cx="980" cy="520" r="4" />
+  </g>
+
+  <path d="M380 310c42-20 90-10 130 16 42 26 52 66 50 100s-28 68-78 78-86-8-110-36c-24-28-30-72-12-116" fill="none" stroke="#5b3d1d" stroke-width="4" opacity="0.8" />
+
+  <path d="M760 120c22 18 55 12 80 8s45-26 65-18 25 36 12 48-40 10-55 22-14 40-34 44c-24 6-60-22-55-46 6-26 12-36 27-58" fill="none" stroke="#5b3d1d" stroke-width="3" opacity="0.9" />
+
+  <g stroke="#5b3d1d" stroke-width="4" fill="none" opacity="0.95">
+    <path d="M100 220c25-12 50-12 75-4" />
+    <path d="M120 260c20-10 40-12 60-8" />
+    <path d="M140 300c18-12 38-16 58-12" />
+  </g>
+
+  <g stroke="#5b3d1d" stroke-width="3" fill="none" opacity="0.85">
+    <path d="M880 220c40-20 80-10 120 10" />
+    <path d="M860 260c30-18 70-22 105-8" />
+    <path d="M900 300c22-12 46-16 70-10" />
+  </g>
+
+  <g transform="translate(950 120)">
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#5b3d1d" stroke-width="3" opacity="0.95" />
+    <path d="M0-50v100M-50 0h100" stroke="#5b3d1d" stroke-width="3" />
+    <path d="M0-28l24 28-24 28-24-28z" fill="#5b3d1d" opacity="0.75" />
+    <circle cx="0" cy="0" r="8" fill="#5b3d1d" />
+  </g>
+
+  <path d="M80 80h1040v600H80z" fill="none" stroke="#7a5b34" stroke-width="6" opacity="0.5" />
+
+  <path d="M420 240c18 18 46 22 68 12 22-10 42-36 72-28s40 38 34 60-36 26-54 36-26 44-46 54-48 4-58-16-2-48 6-68c8-20 14-32 30-50" fill="none" stroke="#5b3d1d" stroke-width="4" />
+
+  <g fill="#5b3d1d" font-family="Georgia, serif" font-size="22" opacity="0.9">
+    <text x="360" y="210">Aureth Highlands</text>
+    <text x="650" y="170">Nerath Coast</text>
+    <text x="260" y="470">Vhalor Range</text>
+    <text x="870" y="560">Thalor Marsh</text>
+  </g>
+
+  <g fill="none" stroke="#5b3d1d" stroke-width="2" stroke-dasharray="6 8" opacity="0.85">
+    <path d="M210 190c60 20 90 40 120 70" />
+    <path d="M560 400c30 36 60 68 95 88" />
+    <path d="M980 520c-40 20-80 8-110-20" />
+  </g>
+
+  <g stroke="#5b3d1d" fill="none" stroke-width="2" opacity="0.85">
+    <path d="M395 450l-12-18 12-18" />
+    <path d="M455 520l-12-18 12-18" />
+    <path d="M515 390l-12-18 12-18" />
+  </g>
+
+  <g fill="#5b3d1d" opacity="0.9">
+    <text x="90" y="730" font-family="Georgia, serif" font-size="24">Elarion Cartography</text>
+    <text x="85" y="760" font-family="Georgia, serif" font-size="16">Year 212 of the Covenant</text>
+  </g>
+</svg>

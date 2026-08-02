@@ -1,0 +1,19 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f6e3b6" />
+      <stop offset="100%" stop-color="#cfab70" />
+    </linearGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" result="noise" /><feColorMatrix type="saturate" values="0.19" /></filter>
+  </defs>
+  <rect width="1200" height="800" rx="56" fill="url(#bg)" filter="url(#grain)" />
+  <path d="M80 80 H1120 V720 H80 Z" fill="none" stroke="#875f35" stroke-width="18" />
+  <path d="M280 530 C340 440 480 400 570 390 C650 380 740 430 780 520 C820 610 780 690 720 720 C660 750 580 730 500 680 C430 640 360 590 280 530 Z" fill="#a38853" opacity="0.84" />
+  <path d="M300 220 C380 190 520 180 620 230 C700 280 740 350 720 420 C700 490 640 530 580 510 C520 490 500 430 520 380" fill="none" stroke="#6d4b22" stroke-width="16" stroke-dasharray="18 14" />
+  <path d="M320 560 C400 520 480 520 560 560" fill="none" stroke="#6d4b22" stroke-width="12" stroke-linecap="round" />
+  <path d="M820 280 C860 260 900 250 930 280 C960 310 960 350 930 380 C900 410 860 420 820 400" fill="none" stroke="#6d4b22" stroke-width="14" stroke-dasharray="12 16" />
+  <path d="M450 180 C520 170 600 180 660 220 C700 250 730 320 710 360" fill="none" stroke="#6d4b22" stroke-width="12" />
+  <path d="M880 220 L920 250 L880 280" fill="none" stroke="#6d4b22" stroke-width="10" />
+  <circle cx="930" cy="240" r="30" fill="none" stroke="#6d4b22" stroke-width="12" />
+  <text x="120" y="730" font-family="Georgia, serif" font-size="48" fill="#543a1c">Auric Vale of Lunara</text>
+</svg>

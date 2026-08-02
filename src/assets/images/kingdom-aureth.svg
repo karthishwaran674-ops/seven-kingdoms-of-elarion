@@ -1,0 +1,29 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f5e1b7" />
+      <stop offset="100%" stop-color="#cead72" />
+    </linearGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise" /><feColorMatrix type="saturate" values="0.2" /></filter>
+  </defs>
+  <rect width="1200" height="800" rx="56" fill="url(#bg)" filter="url(#grain)" />
+  <path d="M80 80 H1120 V720 H80 Z" fill="none" stroke="#8a5f34" stroke-width="18" />
+  <g opacity="0.65" stroke="#8a5f34" stroke-width="8" fill="none" stroke-linecap="round">
+    <path d="M180 170 C260 150 340 160 420 210" />
+    <path d="M260 670 C340 620 460 630 560 600" />
+    <path d="M880 220 C940 260 980 310 1020 360" />
+  </g>
+  <path d="M240 520 C300 430 380 370 500 350 C620 330 760 400 830 500 C880 580 820 660 720 680 C620 700 520 680 420 620 C340 570 280 540 240 520 Z" fill="#ad8b53" opacity="0.9" />
+  <path d="M360 340 C420 320 500 330 560 370 C620 410 680 470 700 540" fill="none" stroke="#7b562c" stroke-width="16" stroke-dasharray="24 18" />
+  <g fill="none" stroke="#7b562c" stroke-width="12">
+    <path d="M300 600 C360 560 440 560 500 590" />
+    <path d="M510 470 C570 450 620 470 660 510" />
+  </g>
+  <g transform="translate(780 170)">
+    <circle cx="0" cy="0" r="70" fill="none" stroke="#7b562c" stroke-width="14" />
+    <line x1="0" y1="-70" x2="0" y2="70" stroke="#7b562c" stroke-width="10" />
+    <line x1="-70" y1="0" x2="70" y2="0" stroke="#7b562c" stroke-width="10" />
+    <polygon points="0,-20 10,0 0,20 -10,0" fill="#7b562c" />
+  </g>
+  <text x="120" y="730" font-family="Georgia, serif" font-size="48" fill="#5e3d1f">Sunspire of Aureth</text>
+</svg>

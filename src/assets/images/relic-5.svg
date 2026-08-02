@@ -1,0 +1,17 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="parchment" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f4ddac"/>
+      <stop offset="100%" stop-color="#c79f69"/>
+    </linearGradient>
+    <filter id="noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" result="noise" />
+      <feColorMatrix type="saturate" values="0.15" />
+    </filter>
+  </defs>
+  <rect width="1200" height="800" rx="80" fill="url(#parchment)" filter="url(#noise)" />
+  <rect x="90" y="90" width="1020" height="620" rx="48" fill="none" stroke="#8e6b35" stroke-width="16" />
+  <path d="M450 240 C500 190 580 180 640 230 C700 280 720 360 690 420 C660 480 590 520 520 500 C460 480 430 410 450 340 Z" fill="#8c6c43" opacity="0.75" />
+  <path d="M750 320 C770 280 820 260 870 280 C920 300 940 340 930 380 C920 420 880 450 840 450 C800 450 770 410 750 360 Z" fill="#6e4a27" />
+  <text x="120" y="730" font-family="Georgia, serif" font-size="62" fill="#5d3d1a" letter-spacing="3">Ancient Compass</text>
+</svg>

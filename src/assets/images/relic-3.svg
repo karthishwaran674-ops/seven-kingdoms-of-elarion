@@ -1,0 +1,17 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="parchment" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f5ddb4"/>
+      <stop offset="100%" stop-color="#d1a86b"/>
+    </linearGradient>
+    <filter id="noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="4" result="noise" />
+      <feColorMatrix type="saturate" values="0.2" />
+    </filter>
+  </defs>
+  <rect width="1200" height="800" rx="80" fill="url(#parchment)" filter="url(#noise)" />
+  <rect x="100" y="100" width="1000" height="620" rx="56" fill="none" stroke="#825b2a" stroke-width="18" />
+  <path d="M300 520 C340 430 490 380 590 420 C720 470 760 620 660 680 C540 760 360 720 300 520 Z" fill="#7c5b3b" opacity="0.75" />
+  <path d="M540 240 C560 220 620 210 660 240 C700 270 710 320 680 350 C650 380 590 380 560 350 C530 320 520 280 540 240 Z" fill="#684324" />
+  <text x="130" y="730" font-family="Georgia, serif" font-size="62" fill="#5f3d1f" letter-spacing="3">Rune Tablet</text>
+</svg>

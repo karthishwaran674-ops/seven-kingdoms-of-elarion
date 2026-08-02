@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: 'Inter', sans-serif;
+  background-color: #050816;
+  color: #f8fafc;
+}
+
+.home-pattern {
+  background-image: radial-gradient(circle at center, rgba(255, 241, 192, 0.08), transparent 25%),
+    linear-gradient(180deg, rgba(76, 51, 25, 0.28), rgba(33, 18, 8, 0.96));
+  background-size: cover;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #1b1205;
+  background-image: linear-gradient(180deg, rgba(76, 51, 25, 0.90) 0%, rgba(57, 33, 14, 0.92) 30%, rgba(33, 18, 8, 0.98) 100%), radial-gradient(circle at top left, rgba(255, 241, 186, 0.14), transparent 24%), radial-gradient(circle at bottom right, rgba(255, 200, 110, 0.08), transparent 18%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #f8fafc;
+}
+
+#root {
+  min-height: 100vh;
+  background: transparent;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(110, 231, 249, 0.35);
+  color: white;
+}
+
+.background-scene {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.background-sky {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(141, 112, 254, 0.24), transparent 24%),
+    radial-gradient(circle at 20% 10%, rgba(30, 212, 161, 0.12), transparent 20%),
+    linear-gradient(180deg, #060913 0%, #020409 48%, #02040a 100%);
+  animation: skyPulse 18s ease-in-out infinite;
+}
+
+.background-stars {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 10% 12%, rgba(255, 255, 255, 0.9) 0, transparent 2px),
+    radial-gradient(circle at 24% 18%, rgba(255, 255, 255, 0.8) 0, transparent 1.8px),
+    radial-gradient(circle at 40% 5%, rgba(255, 255, 255, 0.85) 0, transparent 1.5px),
+    radial-gradient(circle at 65% 14%, rgba(255, 255, 255, 0.75) 0, transparent 1.6px),
+    radial-gradient(circle at 80% 22%, rgba(255, 255, 255, 0.9) 0, transparent 2px),
+    radial-gradient(circle at 55% 8%, rgba(255, 255, 255, 0.85) 0, transparent 1.5px),
+    radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.7) 0, transparent 1.4px);
+  background-size: 100% 100%;
+  opacity: 0.7;
+  filter: blur(0.5px);
+  animation: starTwinkle 24s ease-in-out infinite;
+}
+
+.background-aurora {
+  position: absolute;
+  left: 50%;
+  top: 12%;
+  width: 140%;
+  height: 32%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle at 50% 20%, rgba(84, 255, 208, 0.18), transparent 25%),
+    linear-gradient(90deg, rgba(96, 165, 250, 0.08), rgba(168, 85, 247, 0.14), rgba(34, 211, 238, 0.08));
+  filter: blur(42px);
+  opacity: 0.78;
+  animation: auroraFloat 22s ease-in-out infinite;
+}
+
+.background-cloud {
+  position: absolute;
+  top: 14%;
+  width: 42%;
+  height: 18%;
+  background: radial-gradient(circle at 50% 40%, rgba(190, 194, 255, 0.16), transparent 45%),
+    radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.12), transparent 42%),
+    radial-gradient(circle at 70% 50%, rgba(174, 176, 255, 0.12), transparent 42%);
+  filter: blur(10px);
+  opacity: 0.7;
+  border-radius: 50%;
+}
+
+.background-cloud--one {
+  left: 8%;
+  top: 18%;
+  width: 32%;
+  animation: driftCloud 80s linear infinite;
+}
+
+.background-cloud--two {
+  left: 40%;
+  top: 9%;
+  width: 40%;
+  animation: driftCloud 108s linear infinite reverse;
+}
+
+.background-cloud--three {
+  left: 62%;
+  top: 22%;
+  width: 38%;
+  animation: driftCloud 92s linear infinite;
+}
+
+.background-moon {
+  position: absolute;
+  right: 14%;
+  top: 12%;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, rgba(239, 246, 255, 0.95) 0%, rgba(203, 223, 255, 0.92) 18%, rgba(114, 140, 193, 0.22) 38%, rgba(10, 23, 42, 0.12) 72%);
+  box-shadow: 0 0 140px rgba(174, 203, 255, 0.2), inset -18px -12px 30px rgba(0, 0, 20, 0.18);
+}
+
+.background-mountains {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 30vh;
+  background: linear-gradient(180deg, rgba(9, 16, 31, 0) 0%, rgba(10, 15, 28, 0.9) 28%, rgba(3, 6, 15, 1) 100%);
+  clip-path: polygon(0 100%, 7% 68%, 16% 82%, 24% 54%, 31% 72%, 42% 45%, 52% 62%, 60% 38%, 69% 60%, 79% 44%, 85% 58%, 92% 46%, 100% 70%, 100% 100%);
+  filter: blur(0.85px);
+}
+
+.background-castle {
+  position: absolute;
+  left: 14%;
+  bottom: 14%;
+  width: 16%;
+  min-width: 180px;
+  height: 18%;
+  max-height: 260px;
+  background: linear-gradient(180deg, rgba(6, 9, 19, 0.95) 0%, rgba(8, 11, 24, 1) 100%);
+  clip-path: polygon(0 100%, 0 45%, 8% 45%, 8% 10%, 18% 10%, 18% 32%, 26% 32%, 26% 8%, 34% 8%, 34% 36%, 40% 36%, 40% 18%, 48% 18%, 48% 40%, 55% 40%, 55% 14%, 64% 14%, 64% 42%, 72% 42%, 72% 20%, 80% 20%, 80% 50%, 100% 50%, 100% 100%);
+  box-shadow: inset 0 0 36px rgba(32, 121, 145, 0.06), 0 0 50px rgba(2, 6, 19, 0.75);
+}
+
+.background-forest {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 24vh;
+  background: linear-gradient(180deg, rgba(7, 12, 18, 0) 0%, rgba(3, 8, 14, 0.72) 45%, rgba(2, 6, 11, 1) 100%);
+  clip-path: polygon(0 100%, 4% 72%, 12% 80%, 17% 64%, 24% 78%, 31% 62%, 38% 84%, 46% 58%, 52% 80%, 58% 66%, 66% 86%, 74% 60%, 83% 76%, 91% 56%, 100% 72%, 100% 100%);
+  animation: forestShift 80s linear infinite;
+}
+
+.background-fog {
+  position: absolute;
+  inset: auto -10% 0 -10%;
+  height: 24%;
+  background: radial-gradient(circle at 50% 8%, rgba(17, 32, 54, 0.42), transparent 42%),
+    linear-gradient(180deg, rgba(14, 24, 40, 0.85), transparent 75%);
+  filter: blur(10px);
+  opacity: 0.78;
+  animation: fogDrift 28s ease-in-out infinite;
+}
+
+.background-fireflies {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 15% 18%, rgba(175, 255, 184, 0.9) 0, transparent 2.6px),
+    radial-gradient(circle at 22% 40%, rgba(180, 253, 255, 0.85) 0, transparent 2px),
+    radial-gradient(circle at 45% 35%, rgba(183, 255, 196, 0.8) 0, transparent 2.4px),
+    radial-gradient(circle at 75% 22%, rgba(224, 255, 169, 0.85) 0, transparent 2px),
+    radial-gradient(circle at 85% 45%, rgba(198, 243, 255, 0.82) 0, transparent 2.2px);
+  opacity: 0.55;
+  filter: blur(1px);
+  animation: fireflyDrift 16s ease-in-out infinite;
+}
+
+.background-shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  opacity: 0;
+}
+
+.background-shooting-star::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 120px;
+  height: 2px;
+  transform: translateY(-50%) rotate(-15deg);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), transparent 100%);
+  opacity: 0.55;
+}
+
+.background-shooting-star--one {
+  top: 14%;
+  left: 12%;
+  animation: shootingStarOne 8s ease-in-out infinite;
+}
+
+.background-shooting-star--two {
+  top: 18%;
+  left: 68%;
+  animation: shootingStarTwo 10s ease-in-out 2s infinite;
+}
+
+.background-shooting-star--three {
+  top: 8%;
+  left: 48%;
+  animation: shootingStarThree 12s ease-in-out 4s infinite;
+}
+
+.background-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 60%, rgba(0, 0, 0, 0.76) 100%);
+  pointer-events: none;
+}
+
+@keyframes skyPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.88;
+  }
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes auroraFloat {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0px) scaleX(1);
+  }
+  50% {
+    transform: translateX(-50%) translateY(6px) scaleX(1.04);
+  }
+}
+
+@keyframes driftCloud {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-20vw);
+  }
+}
+
+@keyframes fogDrift {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(12vw);
+  }
+}
+
+@keyframes forestShift {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-1.2%);
+  }
+}
+
+@keyframes fireflyDrift {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(1.2vw, -0.9vw);
+  }
+}
+
+@keyframes shootingStarOne {
+  0%, 10% { opacity: 0; transform: translateX(0) translateY(0) scale(0.9); }
+  15% { opacity: 1; }
+  30% { opacity: 0.95; transform: translateX(28vw) translateY(12vh) scale(1); }
+  100% { opacity: 0; }
+}
+
+@keyframes shootingStarTwo {
+  0%, 15% { opacity: 0; transform: translateX(0) translateY(0) scale(0.9); }
+  20% { opacity: 1; }
+  35% { opacity: 0.95; transform: translateX(24vw) translateY(10vh) scale(1); }
+  100% { opacity: 0; }
+}
+
+@keyframes shootingStarThree {
+  0%, 20% { opacity: 0; transform: translateX(0) translateY(0) scale(0.9); }
+  25% { opacity: 1; }
+  40% { opacity: 0.95; transform: translateX(-22vw) translateY(14vh) scale(1); }
+  100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .background-sky,
+  .background-stars,
+  .background-aurora,
+  .background-cloud,
+  .background-fog,
+  .background-forest,
+  .background-fireflies,
+  .background-shooting-star {
+    animation: none !important;
+  }
+
+  .background-cloud {
+    opacity: 0.5;
+  }
+}

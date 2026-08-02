@@ -1,0 +1,25 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f3deb7" />
+      <stop offset="100%" stop-color="#c7a671" />
+    </linearGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" result="noise" /><feColorMatrix type="saturate" values="0.2" /></filter>
+  </defs>
+  <rect width="1200" height="800" rx="56" fill="url(#bg)" filter="url(#grain)" />
+  <path d="M80 80 H1120 V720 H80 Z" fill="none" stroke="#7f5d31" stroke-width="18" />
+  <path d="M240 500 C320 390 440 360 540 370 C620 380 700 430 760 510 C820 590 790 670 710 700 C630 730 560 720 500 680 C440 640 380 580 240 500 Z" fill="#947148" opacity="0.84" />
+  <g stroke="#5e3d1b" stroke-width="16" fill="none">
+    <path d="M280 260 C340 220 420 210 500 240" stroke-dasharray="18 16" />
+    <path d="M320 540 C400 500 480 500 560 540" />
+    <path d="M520 400 C560 380 620 380 660 420" stroke-dasharray="16 14" />
+  </g>
+  <g stroke="#5e3d1b" stroke-width="12" fill="none">
+    <path d="M270 610 C350 570 430 580 510 610" />
+    <path d="M450 470 C500 450 560 460 600 500" />
+  </g>
+  <path d="M760 250 C800 230 850 230 890 260 C930 290 930 330 900 360 C870 390 820 400 780 380" fill="none" stroke="#5e3d1b" stroke-width="14" />
+  <circle cx="860" cy="260" r="30" fill="none" stroke="#5e3d1b" stroke-width="14" />
+  <path d="M860 230 C845 245 860 260 875 245" fill="none" stroke="#5e3d1b" stroke-width="10" />
+  <text x="120" y="730" font-family="Georgia, serif" font-size="48" fill="#513917">Mosshaven of Thalor</text>
+</svg>

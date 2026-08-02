@@ -1,0 +1,29 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f4e1b3" />
+      <stop offset="100%" stop-color="#b9936d" />
+    </linearGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.92" numOctaves="4" result="noise" /><feColorMatrix type="saturate" values="0.18" /></filter>
+  </defs>
+  <rect width="1200" height="800" rx="56" fill="url(#bg)" filter="url(#grain)" />
+  <path d="M80 80 H1120 V720 H80 Z" fill="none" stroke="#6a4326" stroke-width="18" />
+  <path d="M260 520 C320 430 420 390 520 380 C620 370 700 420 760 495 C820 570 780 670 680 700 C580 730 500 700 420 650 C360 610 320 570 260 520 Z" fill="#7f5f41" opacity="0.83" />
+  <g stroke="#4a341b" stroke-width="14" fill="none">
+    <path d="M300 260 C360 230 440 220 520 250" stroke-dasharray="18 12" />
+    <path d="M320 560 C380 520 460 520 540 560" />
+    <path d="M340 440 C400 420 470 420 520 450" stroke-dasharray="16 14" />
+  </g>
+  <g fill="none" stroke="#4a341b" stroke-width="12">
+    <path d="M260 620 C340 590 420 600 500 630" />
+    <path d="M600 320 C660 300 720 320 760 360" />
+  </g>
+  <path d="M820 270 C860 250 900 250 930 280 C960 310 960 350 930 380 C900 410 860 420 820 400" fill="none" stroke="#4a341b" stroke-width="14" />
+  <g transform="translate(900 220)">
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#4a341b" stroke-width="14" />
+    <line x1="0" y1="-60" x2="0" y2="60" stroke="#4a341b" stroke-width="10" />
+    <line x1="-60" y1="0" x2="60" y2="0" stroke="#4a341b" stroke-width="10" />
+    <polygon points="0,-20 8,0 0,20 -8,0" fill="#4a341b" />
+  </g>
+  <text x="120" y="730" font-family="Georgia, serif" font-size="48" fill="#45331d">Starfall Hollow</text>
+</svg>
