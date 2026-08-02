@@ -1,44 +1,31 @@
 const { validationResult } = require('express-validator');
-const ContactMessage = require('../models/contactModel');
-const sendMail = require('../utils/mailer');
+const Message = require('../models/Message');
+const sendEmail = require('../utils/sendEmail');
 
 exports.createContact = async (req, res) => {
   const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ success: false, message: 'Validation failed', errors: errors.array() });
-  }
+  if (!errors.isEmpty()) return res.status(400).json({ errors: errors.array() });
 
   const { name, email, message } = req.body;
-  const ipAddress = req.headers['x-forwarded-for'] || req.socket.remoteAddress || 'unknown';
-  const createdAt = new Date();
-
   try {
-    const saved = await ContactMessage.create({
-      name,
-      email,
-      message,
-      date: createdAt,
-      ipAddress,
-    });
+    const saved = await Message.create({ name, email, message });
 
-    const mailResult = await sendMail({
-      to: process.env.EMAIL_USER || 'elarionuniverse007@gmail.com',
-      replyTo: email,
-      subject: 'New Contact Form Submission',
-      html: `
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong> ${message}</p>
-        <p><strong>Time:</strong> ${createdAt.toString()}</p>
-      `,
-    });
-
-    if (!mailResult.success) {
-      return res.status(500).json({ success: false, message: 'Failed to send message.' });
+    let emailResult = { sent: false, reason: 'skipped' };
+    if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
+      emailResult = await sendEmail({
+        to: 'envoy@elarionrealm.com',
+        subject: 'New contact message from Elarion',
+        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+      });
     }
 
-    return res.status(201).json({ success: true, message: 'Message sent successfully.' });
+    res.status(201).json({
+      message: 'Contact message saved',
+      data: saved,
+      email: emailResult.sent ? 'sent' : 'not_sent',
+      emailReason: emailResult.reason || 'unknown',
+    });
   } catch (error) {
-    return res.status(500).json({ success: false, message: 'Failed to send message.' });
+    res.status(500).json({ message: 'Could not save contact message' });
   }
 };

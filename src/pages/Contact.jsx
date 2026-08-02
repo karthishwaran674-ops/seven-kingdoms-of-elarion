@@ -13,18 +13,13 @@ function Contact() {
     event.preventDefault();
     setLoading(true);
     setError('');
-    setSubmitted(false);
 
     try {
-      const response = await contactApi.sendMessage(formData);
-      if (response?.data?.success) {
-        setSubmitted(true);
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        setError(response?.data?.message || 'Failed to send message.');
-      }
+      await contactApi.sendMessage(formData);
+      setSubmitted(true);
+      setFormData({ name: '', email: '', message: '' });
     } catch (err) {
-      setError(err.response?.data?.message || 'Failed to send message.');
+      setError(err.response?.data?.errors?.[0]?.msg || 'Unable to send message right now.');
     } finally {
       setLoading(false);
     }
@@ -83,7 +78,7 @@ function Contact() {
             </label>
             <div className="mt-6 flex items-center justify-between gap-4">
               <div>
-                <p className="text-sm text-slate-400">{submitted ? 'Message sent successfully.' : 'The realm listens.'}</p>
+                <p className="text-sm text-slate-400">{submitted ? 'Your signal has been sent.' : 'The realm listens.'}</p>
                 {error ? <p className="mt-1 text-sm text-rose-400">{error}</p> : null}
               </div>
               <Button type="submit" disabled={loading}>{loading ? 'Sending...' : 'Send'}</Button>
